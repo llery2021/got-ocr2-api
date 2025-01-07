@@ -12,6 +12,7 @@ got-ocr2[官方项目](https://github.com/Ucas-HaoranWei/GOT-OCR2.0)由阶跃星
 ````md
 # 下载项目，进入项目所在目录（/mnt/d/test为示意目录）
 git https://github.com/llery2021/got-ocr2-api.git
+git lfs pull # 拉取项目中大文件（权重文件），需要安装git LFS插件
 cd /mnt/d/test/got-ocr2-api 
 # 使用conda命令新建python虚拟环境
 # 最低要求python版本>=3.8，推荐版本3.10.14
