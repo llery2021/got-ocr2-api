@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "GOT2-OCR-API"
+version = "0.1.0"
+description = "GOT2-OCR-API llama_cpp"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+]
+dependencies = [
+    # "torch", "torchvision",
+    # "flash_attn",
+    "pdf2image",
+    "requests", 
+    "opencv-python",
+    "fastapi", "natsort", "uvicorn", 
+    "llama_cpp_python[all]==0.3.5"
+]
+
+[tool.setuptools.packages.find]
+exclude = ["assets*", "benchmark*", "docs", "dist*", "playground*", "scripts*", "tests*"]
+
+[tool.wheel]
+exclude = ["assets*", "benchmark*", "docs", "dist*", "playground*", "scripts*", "tests*"]
+
