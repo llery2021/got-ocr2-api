@@ -141,7 +141,7 @@ async def ocr_v1(raw_request: Request) -> Response:
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--host", type=str, default=None)
-    parser.add_argument("--port", type=int, default=8080)
+    parser.add_argument("--port", type=int, default=8000)
     parser.add_argument("--model-path", type=str, default="")
     parser.add_argument("--ssl-keyfile", type=str, default=None)
     parser.add_argument("--ssl-certfile", type=str, default=None)
