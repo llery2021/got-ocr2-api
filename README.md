@@ -27,6 +27,25 @@ pip install flash_attn --no-build-isolation # 这货不容易安装，出现问�
 pip install -e .
 ````
 
+## 下载GOT模型权重文件
+下载模型权重文件请访问 [魔塔社区](https://www.modelscope.cn/models/stepfun-ai/GOT-OCR2_0/files) 或从 [百度网盘](https://pan.baidu.com/s/1G4aArpCOt6I_trHv_1SE2g) 直接下载<提取码：OCR2>  
+假设模型权重文件下载后存放于本地的路径为 /mnt/d/GOT-OCR2.0/GOT_weights  
+修改 **config.json** 文件中两处参数  
+（1）architectures 参数从原先的 *GOTQwenForCausalLM* --> *Qwen2GotForCausalLM*  
+（2）model_type 参数从原先的 *GOT* --> *qwen2*，修改后示意如下：
+
+````json
+{
+  "_name_or_path": "none",
+  "architectures": [
+    "Qwen2GotForCausalLM"
+  ],
+  ...省略其他不用修改的参数...
+  "model_type": "qwen2",
+  ...省略其他不用修改的参数...
+}
+  ````
+
 ## 模型转换
 项目中convert_hf_to_gguf.py为模型转换脚本，执行命令示例：
 ````md
