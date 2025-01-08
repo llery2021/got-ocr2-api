@@ -100,7 +100,7 @@ ____________________________
 ````md
 type 识别模式，取值plain或format
 # 取值plain时为纯文本模式，识别结果不含格式化信息
-# 取值format时为格式化文本模式，比如数学公式会返回mathpix-markdown-it格式
+# 取值format时为格式化文本模式，比如数学公式会返回mathpix markdown格式
 ````
 ____________________________
 ````md
@@ -151,7 +151,7 @@ repetition_penalty 模型重复惩罚参数
 
 ```
 
-## 调用示例
+## 客户端调用示例
 1、java调用示例（使用OKHttp）
 ```java
 OkHttpClient client = new OkHttpClient().newBuilder().build();
