@@ -27,13 +27,13 @@ pip install flash_attn --no-build-isolation # 这货不容易安装，出现问�
 pip install -e .
 ````
 
-## 下载GOT模型权重文件
-下载模型权重文件请访问 [魔塔社区](https://www.modelscope.cn/models/stepfun-ai/GOT-OCR2_0/files) 或从 [百度网盘](https://pan.baidu.com/s/1G4aArpCOt6I_trHv_1SE2g) 直接下载<提取码：OCR2>  
+# 下载GOT模型权重文件
+模型权重(HF)文件请从 [百度网盘](https://pan.baidu.com/s/1G4aArpCOt6I_trHv_1SE2g) 下载<提取码：OCR2>  
 假设模型权重文件下载后存放于本地的路径为 /mnt/d/GOT-OCR2.0/GOT_weights  
 修改 **config.json** 文件中两处参数  
 （1）architectures 参数从原先的 *GOTQwenForCausalLM* --> *Qwen2GotForCausalLM*  
-（2）model_type 参数从原先的 *GOT* --> *qwen2*
-（3）剔除auto_map 参数，修改后示意如下：
+（2）model_type 参数从原先的 *GOT* --> *qwen2* 修改后示意如下：
+
 ````json
 {
   "_name_or_path": "none",
@@ -43,9 +43,9 @@ pip install -e .
   "attention_dropout": 0.0,
   "bos_token_id": 151643,
   "eos_token_id": 151643,
-  ...省略其他不用修改的参数...
+  ...省略其他参数...
   "model_type": "qwen2",
-  ...省略其他不用修改的参数...
+  ...省略其他参数...
 }
   ````
 
